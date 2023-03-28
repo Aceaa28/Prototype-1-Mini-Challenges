@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 15;
     public float turnSpeed = 50;
     public float horizontalInput;
     private float verticalInput;
+    public Camera mainCamera;
+    public Camera hood;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,11 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         // Turns the car on the Y axis
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+
+        if (Input.GetKeyDown(KeyCode.P)) 
+        {
+           mainCamera.enabled = !mainCamera.enabled;
+           hood.enabled = !hood.enabled;
+        }
     }
 }
