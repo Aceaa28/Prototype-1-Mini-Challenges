@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed709a536c6ed467ead9815799891a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   turnSpeed: 200
   horizontalInput: 0
   mainCamera: {fileID: 534669904}
